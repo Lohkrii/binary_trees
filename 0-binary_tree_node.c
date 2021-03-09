@@ -13,7 +13,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 	root = malloc(sizeof(binary_tree_t));
 	if (root == NULL)
-		return NULL;
+		return (NULL);
 
 	root->n = value;
 	root->parent = parent;
