@@ -11,7 +11,7 @@ int tree_weight(const binary_tree_t *tree)
 	int lidx, ridx;
 
 	if (!tree)
-	 return (-1);
+		return (-1);
 	lidx = tree_weight(tree->left) + 1;
 	ridx = tree_weight(tree->right) + 1;
 
