@@ -9,16 +9,16 @@
 
 void level_order(const binary_tree_t *tree, size_t idx, void (*func)(int))
 {
-	if (!tree)
-		return;
-	if (idx == 1)
-		func(tree->n);
-	else if (idx > 1)
+	if (tree)
 	{
-		level_order(tree->left, idx - 1, func);
-		level_order(tree->right, idx - 1, func);
+		if (idx == 1)
+			func(tree->n);
+		else if (idx > 1)
+		{
+			level_order(tree->left, idx - 1, func);
+			level_order(tree->right, idx - 1, func);
+		}
 	}
-	return;
 }
 
 size_t binary_tree_height(const binary_tree_t *tree)
@@ -26,7 +26,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	size_t lidx, ridx;
 
 	if (!tree)
-		return(0);
+		return (0);
 	lidx = binary_tree_height(tree->left);
 	ridx = binary_tree_height(tree->right);
 	if (lidx >= ridx)
