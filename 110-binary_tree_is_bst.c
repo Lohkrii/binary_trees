@@ -28,5 +28,5 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
-	return (bst_helper(tree, INT_MIN, INT_MAX));
+	return (bst_helper(tree, -2147483647, 2147483647));
 }
