@@ -1,9 +1,10 @@
 #include "binary_trees.h"
+#include "9-binary_tree_height.c"
 
 /**
  * level_order - Executes the function in the node.
  * @tree: Is the tree in use.
- * @idx = Level
+ * @idx: Level
  * @func: Function to perform inside the node.
  */
 
@@ -19,19 +20,6 @@ void level_order(const binary_tree_t *tree, size_t idx, void (*func)(int))
 			level_order(tree->right, idx - 1, func);
 		}
 	}
-}
-
-size_t binary_tree_height(const binary_tree_t *tree)
-{
-	size_t lidx, ridx;
-
-	if (!tree)
-		return (0);
-	lidx = binary_tree_height(tree->left);
-	ridx = binary_tree_height(tree->right);
-	if (lidx >= ridx)
-		return (lidx + 1);
-	return (ridx + 1);
 }
 
 /**
