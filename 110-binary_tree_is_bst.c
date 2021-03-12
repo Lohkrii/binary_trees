@@ -3,6 +3,8 @@
 /**
  * bst_helper - Actually compares to find if tree is bst.
  * @tree: Is the tree to look into.
+ * @min: Is the lowest posible int.
+ * @max: Is the highest posible int.
  * Return: Returns the minumum value of the tree.
  */
 
